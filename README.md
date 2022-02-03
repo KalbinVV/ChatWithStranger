@@ -1,9 +1,6 @@
 # ChatWithStranger
 Telegram bot to chat with strangers. Fully customizable!
 
-# Install
-mvn package
-
 # Supported type of messages
 1. Text message
 2. Voice message
