@@ -2,9 +2,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.qurao</groupId>
   <artifactId>telegramstrangersbot</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0</version>
   <name>TelegramStrangersBot</name>
   <description>Chat with strangers. Telegram bot.</description>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
   <dependencies>
 	<dependency>
     	<groupId>org.telegram</groupId>
