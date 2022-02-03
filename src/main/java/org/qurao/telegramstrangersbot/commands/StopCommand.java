@@ -15,13 +15,13 @@ public class StopCommand extends SimpleCommand{
 		LongPollingBot bot = TelegramStrangersBot.getBot();
 		if(usersChatHandler.isUserWaiting(userID)) {
 			usersChatHandler.removeUserFromWaiting(userID);
-			bot.sendTextMessage(userID, "Вы прекратили поиск собеседника!");
+			bot.sendTextMessage(userID, TelegramStrangersBot.getMessageTexts().getCancelSearchMessage());
 		}else {
 			if(usersChatHandler.isUserHasOpponent(userID)) {
 				usersChatHandler.removeUserFromChat(userID);
-				bot.sendTextMessage(userID, "Вы прекратили чат!");
+				bot.sendTextMessage(userID, TelegramStrangersBot.getMessageTexts().getCancelChatMessage());
 			}else {
-				bot.sendTextMessage(userID, "Вам нечего прекращать!");
+				bot.sendTextMessage(userID, TelegramStrangersBot.getMessageTexts().getDontHaveOpponentMessage());
 			}
 		}
 		return true;

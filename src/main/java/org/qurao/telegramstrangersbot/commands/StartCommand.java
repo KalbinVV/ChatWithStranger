@@ -5,13 +5,11 @@ import org.qurao.telegramstrangersbot.TelegramStrangersBot;
 import org.telegram.telegrambots.meta.api.objects.Message;
 
 public class StartCommand extends SimpleCommand{
-
-	
 	
 	@Override
 	public boolean run(Message message) {
 		TelegramStrangersBot.getBot().sendTextMessage(message.getChatId(), 
-				"Добро пожаловать!\n/next - найти нового собеседника.\n/stop - прекратить чат.\nСоздатель: @Qurao");
+				TelegramStrangersBot.getMessageTexts().getStartMessage());
 		return true;
 	}
 

@@ -14,9 +14,9 @@ public class NextCommand extends SimpleCommand{
 		Long userID = message.getChatId();
 		LongPollingBot bot = TelegramStrangersBot.getBot();
 		if(usersChatHandler.isUserWaiting(userID)) {
-			bot.sendTextMessage(userID, "Вы уже итак ищете собеседника!\n/stop - прекратить поиск.");
+			bot.sendTextMessage(userID, TelegramStrangersBot.getMessageTexts().getAlreadySearchMessage());
 		}else {
-			bot.sendTextMessage(userID, "Вы начали поиск собеседника!\n/stop - прекратить поиск.");
+			bot.sendTextMessage(userID, TelegramStrangersBot.getMessageTexts().getStartSearchMessage());
 			usersChatHandler.addUserToChat(userID);
 		}
 		return true;
